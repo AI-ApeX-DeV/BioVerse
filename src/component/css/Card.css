@@ -1,0 +1,192 @@
+.card {
+    width: 18.25rem;
+    min-height: auto;
+    max-height: 32.8625rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(149, 149, 149, 0.22);
+    background: #fff;
+    box-shadow: 1px 1px 20px 0px rgba(136, 136, 136, 0.15);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 1rem; */
+  }
+  
+  /* img {
+    width: 18.25rem;
+    height: 12.25rem;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  } */
+  p.desc{
+    display: block;
+    margin: 1px;
+  }
+  
+  .desc {
+    width: 14.8125rem;
+    height: max-content;
+    color: var(--gray-600, #4b5563);
+    display: block;
+    font-size: 1.02rem;
+    font-style: normal;
+    font-weight: 650;
+    line-height: normal;
+    /* height: 1rem; */
+    margin: 1rem;
+  }
+  
+  .megaCategoryDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 16rem;
+    height: max-content;
+  }
+  
+  .megaCategoryDiv p{
+    width: 30rem;
+  }
+  
+  .categoryDiv {
+    display: flex;
+    width: 5.0625rem;
+    height: auto;
+    padding: 0.9rem;
+    /* padding: 0.1875rem 0.8125rem 0.25rem 0.8125rem; */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 1.625rem;
+    border: 1px solid var(--orange-400, #ff8a4c);
+    background: var(--orange-200, #fcd9bd);
+    margin: 0.1rem;
+  }
+  
+  .categoryDiv p {
+    width: 3.4375rem;
+    height: 0.5625rem;
+    color: var(--teal-900, #014451);
+  
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0.2rem;
+  }
+  
+  .userDiv {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    align-items: center;
+    width: 16.25rem;
+    padding-left: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .userDiv img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 3.25rem;
+    padding-right: 0.3rem;
+  }
+  
+  .userDiv p {
+    color: var(--gray-600, #4b5563);
+  
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .preFund {
+    display: flex;
+    justify-content: flex-start;
+    width: 15rem;
+    height: 1.5rem;
+  }
+  
+  .fund {
+    display: flex;
+    width: 7.125rem;
+    height: 1.5rem;
+    padding-left: 0.3rem;
+    /* padding: 0.0625rem 0.0625rem 0.0625rem 1.6875rem; */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1.625rem;
+    border: 1px solid var(--teal-400, #16bdca);
+    background: var(--teal-100, #d5f5f6);
+  }
+  
+  .fund p {
+    width: 45%;
+    height: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ethh {
+    display: flex;
+    height: 1.375rem;
+    width: 55%;
+    /* padding: 0.1875rem 0.625rem 0.1875rem 0.5rem; */
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1.625rem;
+    border: 0px solid var(--teal-700, #036672);
+    background:white;
+  }
+  
+  .ethh img {
+    width: 0.75rem;
+    height: 0.8125rem;
+    padding-right: 0.3rem;
+  }
+  .ethh p {
+    width: 1.5rem;
+    height: 1rem;
+    color: var(--teal-900, #014451);
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .megaProgress {
+    width: 16.25rem;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start;
+       */
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  
+  div.progress {
+    display: flex;
+  
+    padding: 0%;
+    margin: 0%;
+    width: 11rem;
+  }
+  
+  div.progress p {
+    display: flex;
+    align-items: center;
+  
+    width: 100%;
+    height: 0.625rem;
+  }
+  
