@@ -1,0 +1,11 @@
+flask
+pymongo
+tensorflow
+scikit-learn
+numpy
+pandas
+flask_cors
+python-docx
+docx
+matplotlib
+gunicorn
