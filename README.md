@@ -14,9 +14,6 @@ Welcome to Dconnect, a decentralized platform where users can engage with each o
 - Polygon
 - ANON Aadhaar
 
-## Links
-- [Github Repository](https://github.com/AI-ApeX-DeV/GetTogether)
-- [Devfolio Submission](https://devfolio.co/projects/dconnect-0e63)
 
 ## Core DAO Testnet Faucets
 Before starting your journey on Dconnect, it's recommended to read about some core DAO (Decentralized Autonomous Organization) faucets. These are essential components of our platform, ensuring transparency, fairness, and community governance. You can find more information about these faucets [here](https://scan.test.btcs.network/faucet).
