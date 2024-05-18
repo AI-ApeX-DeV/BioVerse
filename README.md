@@ -3,6 +3,7 @@
 Welcome to Dconnect, a decentralized platform where users can engage with each other, earn tokens, and participate in various activities. Before diving into the platform, it's essential to familiarize yourself with some core principles and features.
 
 ## Tech Stack
+- LLmware 
 - Hive
 - Ethereum
 - Verbwire
@@ -14,6 +15,8 @@ Welcome to Dconnect, a decentralized platform where users can engage with each o
 - Polygon
 - ANON Aadhaar
 
+## LLmware
+I utilized LLMware to build a chatbot for my application for solving user queries, It is trained on the data fed by me which has all the application details. leveraging its advanced capabilities in natural language processing and machine learning. LLMware's Api made it easy to develop a sophisticated, context-aware chatbot that engages users in seamless, human-like conversations.
 
 ## Core DAO Testnet Faucets
 Before starting your journey on Dconnect, it's recommended to read about some core DAO (Decentralized Autonomous Organization) faucets. These are essential components of our platform, ensuring transparency, fairness, and community governance. You can find more information about these faucets [here](https://scan.test.btcs.network/faucet).
