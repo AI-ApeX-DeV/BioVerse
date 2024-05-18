@@ -16,7 +16,12 @@ Welcome to Dconnect, a decentralized platform where users can engage with each o
 - ANON Aadhaar
 
 ## LLmware
+
 I utilized LLMware to build a chatbot for my application for solving user queries, It is trained on the data fed by me which has all the application details. leveraging its advanced capabilities in natural language processing and machine learning. LLMware's Api made it easy to develop a sophisticated, context-aware chatbot that engages users in seamless, human-like conversations.
+
+LLMWare HF: https://huggingface.co/llmware
+LLMWare Website: https://www.llmware.ai/
+LLMWare GitHub: https://github.com/llmware-ai/llmware
 
 ## Core DAO Testnet Faucets
 Before starting your journey on Dconnect, it's recommended to read about some core DAO (Decentralized Autonomous Organization) faucets. These are essential components of our platform, ensuring transparency, fairness, and community governance. You can find more information about these faucets [here](https://scan.test.btcs.network/faucet).
