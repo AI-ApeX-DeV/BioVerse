@@ -1,1 +1,0 @@
-URI = "mongodb+srv://shreyashsingh865:Lookinto12@cluster0.jwayy3t.mongodb.net/"
