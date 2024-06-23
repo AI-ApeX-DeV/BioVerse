@@ -16,7 +16,6 @@ import Notifications from "./component/Notifications";
 import Messages from "./component/Messages";
 import Sendmessages from "./component/Sendmessages";
 import Getstarted from "./component/Getstarted";
-import NSFW from "./component/NSFW";
 import Commingsoon from "./component/Commingsoon";
 import Buycoins from "./component/Buycoins";
 import Withdraw from "./component/Withdraw";
@@ -26,7 +25,6 @@ import OpenCard from "./component/OpenCard";
 import ChatUI from "./component/ChatUI";
 import P2P from "./component/P2P";
 import Ledger from "./component/Ledger";
-import AnonAadhar from "./component/AnonAadhar";
 import AiPlatform from "./component/AiPlatform";
 import AiGame from "./component/AiGame";
 
@@ -60,7 +58,6 @@ function App() {
               element={<PostComponent /*state = {state}*/ />}
             />
             <Route path="/send" element={<SendPost /*state = {state}*/ />} />
-            <Route path="/nsfw" element={<NSFW /*state = {state}*/ />} />
             <Route path="/withdraw" element={<Withdraw /*state = {state}*/ />} />
             <Route
               path="/communities"
@@ -100,7 +97,6 @@ function App() {
             <Route path="/chat" element={<ChatUI />} />
             <Route path="/p2p" element={<P2P />} />
             <Route path="/ledger" element={<Ledger />} />
-            <Route path="/aadhar" element={<AnonAadhar />} />
             <Route path="/AiPlat" element={<AiPlatform />} />
           </Routes>
           {/* {<RegisterPage/>}  */}

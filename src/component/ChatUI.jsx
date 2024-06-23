@@ -7,7 +7,7 @@ const ChatUI = (props) => {
     const [messages, setMessages] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [isChatboxOpen, setIsChatboxOpen] = useState(true);
-    const userID = props.currentAccount === '0x2D0cCca38fd0fFc505014798b5C8a47A7a2152F4'?  '1':'0';
+    const userID = props.currentAccount === '0x83A42Ff1F166f4ee2A869f0AAC74A23Ff7E5D6c4'?  '1':'0';
     let update = 1
     const {
         checkIfWalletIsConnected,

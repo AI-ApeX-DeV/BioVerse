@@ -44,7 +44,7 @@ const Getstarted = () => {
       </div>
 
       <div className="relative w-full flex justify-center items-center h-5 text-center text-[16px] text-white font-inter">
-        <div className=" w-fit mx auto font-medium whitespace-pre-wrap">{`Dconnect is deployed on CORE DAO and used ANON AADHAAR for verification.  `}</div>
+        <div className=" w-fit mx auto font-medium whitespace-pre-wrap">{}</div>
       </div>
 
       <div className="relative top-[600px] left-[780px] w-full h-11 text-left text-[16px] text-white font-inter">

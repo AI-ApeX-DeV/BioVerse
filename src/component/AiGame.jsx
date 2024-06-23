@@ -202,7 +202,7 @@ const AiGame = () => {
           style={{ fontFamily: "Lexend" }}
           className="w-max h-fit my-auto flex gap-2 relative text-[0.938rem] font-medium font-lexend text-black text-center"
         >
-          {`DCONNECT is on CORE DAO, to interact you can get CORE DAO’s Testnet from `}
+          {`BioVerse is on CORE DAO, to interact you can get CORE DAO’s Testnet from `}
           <a
             href="https://scan.test.btcs.network/faucet"
             className="[text-decoration:underline]"
@@ -317,7 +317,7 @@ const AiGame = () => {
             {showWinner ? (
               <div className="w-full flex items-center justify-center">
                 {currentAccount ===
-                "0x79634f2ade12eaeefe0bdcb606a49a683967cf46" ? (
+                "0x83A42Ff1F166f4ee2A869f0AAC74A23Ff7E5D6c4" ? (
                   <div className="mt-10 flex flex-col">
                    
                    

@@ -1,0 +1,48 @@
+/* custom-shepherd.css */
+
+.shepherd-theme-custom .shepherd-header {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+.tour-shepherd-icon {
+    /* Adjust the size of the icon */
+    max-width: 50px; /* or any other suitable size */
+    height: auto;
+    margin-right: 10px; /* Add some spacing between the icon and the text */
+    margin: 0 auto;  }
+.shepherd-theme-custom .shepherd-content {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.shepherd-theme-custom .shepherd-footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.shepherd-theme-custom .shepherd-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shepherd-theme-custom .shepherd-button:hover {
+  background-color: #357ABD;
+}
+
+/* Example animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.shepherd-theme-custom .shepherd-element {
+  animation: fadeIn 0.5s ease-in-out;
+}

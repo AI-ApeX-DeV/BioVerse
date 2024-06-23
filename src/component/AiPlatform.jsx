@@ -235,12 +235,12 @@ const AiPlatform = () => {
           style={{ fontFamily: "Lexend" }}
           className="w-max h-fit my-auto flex gap-2 relative text-[0.938rem] font-medium font-lexend text-black text-center"
         >
-          {`DCONNECT is on CORE DAO, to interact you can get CORE DAO’s Testnet from `}
+          {`BioVerse is on CORE DAO, to interact you can get CORE DAO’s Testnet from `}
           <a
             href="https://scan.test.btcs.network/faucet"
             className="[text-decoration:underline]"
           >
-            here
+            
           </a>
           {` `}
           <img

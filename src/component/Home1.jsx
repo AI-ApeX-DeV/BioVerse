@@ -8,11 +8,9 @@ import PostComponent from "./PostComponent";
 import axios from "axios";
 import SendPost from "./SendPost";
 import Alert from "@mui/material/Alert";
-import {
-  LogInWithAnonAadhaar,
-  useAnonAadhaar,
-  AnonAadhaarProof,
-} from "@anon-aadhaar/react";
+import Shepherd from "shepherd.js";
+import 'shepherd.js/dist/css/shepherd.css';
+import './custom-shepherd.css'; 
 const Home1 = () => {
   const navigate = useNavigate();
   const [commentOpen, setCommentOpen] = useState(false);
@@ -45,6 +43,317 @@ const Home1 = () => {
   const [isAlertSuccess, setIsAlertSuccess] = useState(false);
   const [successAlertContent, setSuccessAlertContent] = useState("");
   const [isAlertInfo, setIsAlertInfo] = useState(false);
+
+  useEffect(() => {
+    const tour = new Shepherd.Tour({
+      defaultStepOptions: {
+        cancelIcon: {
+          enabled: true,
+        },
+        classes: 'shepherd-theme-custom', // Apply custom theme
+        scrollTo: { behavior: 'smooth', block: 'center' },
+      },
+    });
+  
+    tour.addStep({
+      id: "welcome",
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Welcome Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>Welcome to the home page! Shepherd.js will guide you through BioVerse</p>
+        </div>
+      `,
+      buttons: [
+        {
+          text: "Next",
+          action: tour.next,
+        },
+      ],
+    });
+  
+    tour.addStep({
+      id: 'walletbutton',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Wallet Button Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>Connect to the metamask wallet first to explore the BioVerse</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#walletbutton',
+        on: 'top'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'bounty',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Bounty Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is the bounty sections, 1 like and 10 comments to posts will give you 50 tokens</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#bounty',
+        on: 'left'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'coinssection',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Coins Section Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>Here you can see your coins you have in your wallet</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#coinssection',
+        on: 'bottom'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'linkupwith',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Link Up With Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>Here you can follow people to contribute more towards goodness</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#linkupwith',
+        on: 'left'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'home',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Home Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This will take you to the home page</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#home',
+        on: 'right'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'notifications',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Notifications Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is where you will see if anybody has liked your biofund post or any comments, etc</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#notifications',
+        on: 'right'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'messages',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Messages Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is where you can see your personal messages</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#messages',
+        on: 'left'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'communities',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Communities Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is where you can collaborate with various communities</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#communities',
+        on: 'right'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'biofunding',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Biofunding Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is where you can see all the fundings and can contribute</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#biofunding',
+        on: 'right'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: 'genai',
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="GenAI Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p>This is the genai feature, create AI driven images and convert to NFT</p>
+        </div>
+      `,
+      attachTo: {
+        element: '#genai',
+        on: 'right'
+      },
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        },
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+  
+    tour.addStep({
+      id: "welcome",
+      text: `
+        <div class="tour-step-content">
+          <div class="tour-step-header"> 
+            <img src="./shepherd.ico" alt="Welcome Image" class="tour-shepherd-icon"/>
+          </div>
+          <br><p> Get Immersed in BioVerse, A step towards Goodness</p>
+        </div>
+      `,
+      buttons: [
+        {
+          text: "Finish",
+          action: tour.next,
+        },
+      ],
+    });
+    // Optional: Start tour automatically
+    tour.start();
+  }, []);
+  
 
   const handleIncrement = () => {
     setCountBuyCoin((prevCount) => prevCount + 1);
@@ -468,10 +777,6 @@ const Home1 = () => {
                     Next
                   </div>
                 </div>
-                <div className="z-50">
-
-                <LogInWithAnonAadhaar  nullifierSeed={1234} />
-                </div>
               </div>
 
               <div className={`p-5  ${fillForm ? "hidden" : "block"}`}>
@@ -542,17 +847,17 @@ const Home1 = () => {
           <div className="flex ">
             <img
               className="relative  bottom-[2.5rem] w-[6rem] h-[9.25rem] object-contain"
-              src="https://i.imgur.com/i81cnsA.png"
+              src="https://i.imgur.com/FiHUeER.png"
               alt=""
             />
           <div
             style={{ fontFamily: "Lexend" }}
-            className="text-[#e9ac86] top-3  relative">Dconnect</div>
+            className="text-[#e9ac86] top-3  relative"></div>
           </div>
 
           <div className="relative bottom-[5rem] w-full flex  items-start justify-center  ">
             <div className="flex flex-col gap-[2.25rem] text-left text-[1.25rem] text-white font-inter">
-              <div
+              <div id="home"
                 onClick={() => {
                   navigate("/home1");
                 }}
@@ -565,7 +870,7 @@ const Home1 = () => {
                 />
                 <div className="relative font-medium ">Home</div>
               </div>
-              <div
+              <div id="notifications"
                 onClick={() => {
                   navigate("/notifications");
                 }}
@@ -576,7 +881,7 @@ const Home1 = () => {
                   alt=""
                   src="https://i.imgur.com/5brDfrE.jpeg"
                 />
-                <div
+                <div 
                   onClick={() => {
                     navigate("/notifications");
                   }}
@@ -585,7 +890,7 @@ const Home1 = () => {
                   Notifications
                 </div>
               </div>
-              <div
+              <div id='messages'
                 onClick={() => {
                   navigate("/messages");
                 }}
@@ -598,7 +903,7 @@ const Home1 = () => {
                 />
                 <div className="relative font-medium">Messages</div>
               </div>
-              <div
+              <div id="communities"
                 onClick={() => {
                   if (num === 1) {
                     navigate("/communities");
@@ -614,7 +919,7 @@ const Home1 = () => {
                 <div className="relative  font-medium">Communities</div>
               </div>
 
-              <div
+              <div id="biofunding"
                 onClick={() => {
                   navigate("/crowdfunding");
                 }}
@@ -625,9 +930,9 @@ const Home1 = () => {
                   alt=""
                   src="https://i.imgur.com/6XKA7yr.png"
                 />
-                <div className="relative font-medium">Crowdfunding</div>
+                <div className="relative font-medium">BioFunding</div>
               </div>
-              <div
+              <div id='genai'
                 onClick={() => {
                   navigate("/AiPlat");
                 }}
@@ -638,14 +943,11 @@ const Home1 = () => {
                   alt=""
                   src="https://i.imgur.com/oAUU8QU.png"
                 />
-                <div className="relative font-medium">AI-Gen</div>
+                <div className="relative font-medium">GenAI</div>
               </div>
 
              
-              {/* <div className="flex flex-row items-start justify-start gap-[0.63rem]">
-<img className="relative w-[1.25rem] h-[1.25rem]" alt="" src="https://cdn.discordapp.com/attachments/1177493315898314792/1184069996142415983/image.png?ex=658aa21e&is=65782d1e&hm=0ce679d0e2e97dd09997ae88aa90f3cd824d6d5ab5263d9948b64fa0db0bd636&" />
-<div className="relative font-medium">Profile</div>
-</div> */}
+      
             </div>
 
             <div></div>
@@ -698,7 +1000,7 @@ const Home1 = () => {
               src="https://i.imgur.com/UU8RPw0.png"
             />
           </div>
-          <a href="https://dsocial.gitbook.io/dsocial/">
+          <a href="https://hackbioheritage.devfolio.co/overview">
             <div className="absolute top-[37.5rem] left-[0.5rem]">
               <img
                 className="w-[45px] h-[45px]"
@@ -797,7 +1099,7 @@ const Home1 = () => {
               }}
               className="relative cursor-pointer rounded-md [background:linear-gradient(106.75deg,_#fdd835,_#fff_49.15%,_#ffd000)] box-border  h-[2.563rem] w-[8.438rem] overflow-hidden text-left text-[0.88rem] text-black font-inter border-t-[1px] border-solid border-cornsilk border-r-[1px] border-l-[1px]"
             >
-              <div
+              <div id="coinssection"
                 title="Buy Coins"
                 className="absolute top-[0.75rem] left-[1.38rem] font-medium"
               >
@@ -811,7 +1113,7 @@ const Home1 = () => {
             </div>
 
             {num === 0 ? (
-              <div
+              <div id="walletbutton"
                 onClick={handleConnectWallet}
                 className="relative rounded-lg hover:bg-violet-400 transition-transform transform hover:scale-75 bg-blueviolet box-border w-[9.875rem] h-[2.56rem] overflow-hidden text-left text-[1rem] text-white font-inter border-t-[1px] border-solid border-mediumslateblue border-r-[1px] border-l-[1px]"
               >
@@ -834,7 +1136,7 @@ const Home1 = () => {
             )}
           </div>
 
-          <div className="flex justify-start ml-10 mt-4">
+          <div id="linkupwith" className="flex justify-start ml-10 mt-4">
             <div className="relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#181818)] box-border w-[16.938rem] h-[23.69rem] overflow-hidden text-left text-[0.88rem] text-white font-inter border-t-[2px] border-solid border-grayz border-r-[1px] border-l-[1px]">
               <b className="absolute top-[1.13rem] left-[1.06rem] text-[1.13rem]">
                 linkup with
@@ -909,7 +1211,7 @@ const Home1 = () => {
             </div>
           </div>
 
-          <div className="relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#181818)] ml-10 mt-4 box-border w-[16.938rem] h-[11.13rem] overflow-hidden text-left text-[1rem] text-gray-50 font-inter ">
+          <div id = "bounty" className="relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#181818)] ml-10 mt-4 box-border w-[16.938rem] h-[11.13rem] overflow-hidden text-left text-[1rem] text-gray-50 font-inter ">
             <b className="absolute top-[0.94rem] left-[1.31rem] text-[1.13rem] text-white">
               {" "}
               Bounty
